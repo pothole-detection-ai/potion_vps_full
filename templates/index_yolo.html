@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>POTION AI - Website</title>
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      text-align: center;
+      margin: 40px 100px 100px 100px;
+      padding: 0;
+    }
+
+    h1 {
+      font-weight: 400;
+      font-size: 45px;
+      padding-bottom: 10px;
+    }
+
+    button {
+      padding: 20px 20px 20px 20px;
+      background-color: #fff6f6;
+      /* Initial background color */
+      color: red;
+      /* Initial text color */
+      border: 1px solid red;
+      /* Initial border color and width */
+      font-size: 18px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      border-radius: 2px;
+      transition: background-color 0.3s, color 0.3s;
+      /* Transition effect on background and text color */
+    }
+
+    button:hover {
+      background-color: red;
+      /* Background color on hover */
+      color: #fff;
+      /* Text color on hover */
+    }
+
+    .icon img {
+      width: 1em;
+      height: 1em;
+      margin-right: 10px;
+    }
+
+    p {
+      font-size: 25px;
+      font-weight: 300;
+      padding-bottom: 5px;
+    }
+
+    form {
+      margin: 20px;
+    }
+
+    #video {
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      /* display: flex;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center; */
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    #container {
+      display: none;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+</head>
+
+<body>
+  <h1><span class="icon"> <img src="/static/potion_ai_512.png"></span> Pothole Detection Using <i>Deep Learning</i></h1>
+  <p>Detect potholes in real-time using your webcam with our model, <br>enhancing safety and security. Using YOLOv8 and Mask RCNN</p>
+
+  <!-- CAMERA -->
+  <div id="container">
+    <!-- <h5>Realtime camera</h5> -->
+    <video autoplay playsinline id="videoElement"></video>
+    <canvas id="canvas"></canvas>
+  </div>
+  <h2>MODEL: YOLOv8</h2>
+  <div class='content video'>
+    <img id="photo">
+  </div>
+  <script src="{{ url_for('static',filename='script_yolo.js') }}"></script>
+</body>
+
+</html>

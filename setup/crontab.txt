@@ -1,0 +1,2 @@
+* * * * * /usr/bin/bash /home/linuxuser/potion/log_time.sh
+* */4 * * * /usr/bin/bash /home/linuxuser/potion/restart_app.sh >> /home/linuxuser/potion/cronjob.log 2>&1
