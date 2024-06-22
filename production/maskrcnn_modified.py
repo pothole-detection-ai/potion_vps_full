@@ -108,10 +108,10 @@ if os.path.exists(output_folder):
     print(f"Folder '{output_folder}' has been deleted successfully.")
 
 # Usage example
-model_path = '/home/detectionpotholes/models/maskrcnn.pth'
-config_path = '/home/detectionpotholes/models/config.yml'
-image_path = '/home/detectionpotholes/assets/photo2.jpeg'
-output_path = '/home/detectionpotholes/assets/photo2_hasil.jpeg'
+model_path = '/root/potion_new/models/maskrcnn.pth'
+config_path = '/root/potion_new/models/config.yml'
+image_path = '/root/potion_new/assets/photo2.jpeg'
+output_path = '/root/potion_new/assets/photo2_hasil.jpeg'
 
 model = MaskRCNNmodified(config_path, model_path)
 # result = model.detect_full(cv2.imread(image_path))

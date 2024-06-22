@@ -1,2 +1,2 @@
-* * * * * /usr/bin/bash /home/detectionpotholes/setup/log_time.sh
-* */4 * * * /usr/bin/bash /home/detectionpotholes/setup/restart_app.sh >> /home/detectionpotholes/logs/cronjob.log 2>&1
+* * * * * /usr/bin/bash /root/potion_new/setup/log_time.sh
+* */4 * * * /usr/bin/bash /root/potion_new/setup/restart_app.sh >> /root/potion_new/logs/cronjob.log 2>&1

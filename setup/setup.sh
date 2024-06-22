@@ -1,7 +1,7 @@
 sudo apt upgrade -y
 sudo apt update -y
 sudo apt install nginx -y
-sudo pip install -r /home/detectionpotholes/requirements.txt
+sudo pip install -r /root/potion_new/requirements.txt
 sudo systemctl enable nginx
 sudo ufw allow 'Nginx Full'
 sudo ufw allow 5000/tcp
