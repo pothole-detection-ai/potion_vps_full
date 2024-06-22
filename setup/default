@@ -20,10 +20,10 @@
 #
 server {
 	listen 433 ssl;
-	server_name vps.potion.my.id www.vps.potion.my.id;
+	server_name realtime.potion.my.id www.realtime.potion.my.id;
 	
-	ssl_certificate /etc/letsencrypt/live/vps.potion.my.id/fullchain.pem;
-	ssl_certificate_key /etc/letsencrypt/live/vps.potion.my.id/privkey.pem;
+	ssl_certificate /etc/letsencrypt/live/realtime.potion.my.id/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/realtime.potion.my.id/privkey.pem;
 
 	# SSL configuration
 	#
@@ -84,8 +84,8 @@ server {
 	#}
 
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/vps.potion.my.id/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/vps.potion.my.id/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/realtime.potion.my.id/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/realtime.potion.my.id/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
@@ -112,13 +112,13 @@ server {
 #}
 
 server {
-    if ($host = vps.potion.my.id) {
+    if ($host = realtime.potion.my.id) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
 
 	listen 80 default_server;
-	server_name vps.potion.my.id www.vps.potion.my.id;
+	server_name realtime.potion.my.id www.realtime.potion.my.id;
     return 404; # managed by Certbot
 
 

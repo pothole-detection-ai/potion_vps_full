@@ -1,5 +1,5 @@
 listen 80;
-server_name vps-test.potion.my.id www.vps-test.potion.my.id;
+server_name realtime.potion.my.id www.realtime.potion.my.id;
 
 location / {
 proxy_pass http://localhost:5000;

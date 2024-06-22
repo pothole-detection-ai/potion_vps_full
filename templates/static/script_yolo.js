@@ -1,4 +1,4 @@
-var socket = io.connect('wss://vps.potion.my.id', {
+var socket = io.connect('wss://realtime.potion.my.id', {
     transports: ['websocket']
 });
 
