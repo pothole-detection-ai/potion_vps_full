@@ -6,6 +6,10 @@ import yolo_v8_modified
 import maskrcnn_modified
 
 def register_routes(app):
+    @app.route("/")
+    def yolo():
+        return render_template("index_yolo.html", model_name=Config.MODEL_NAME)
+    
     @app.route("/yolo")
     def yolo():
         return render_template("index_yolo.html", model_name=Config.MODEL_NAME)

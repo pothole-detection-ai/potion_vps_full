@@ -10,6 +10,6 @@ import os
 # DEVELOPMENT
 class Config:
     SECRET_KEY = os.getenv("SECRET_KEY", "secret!")
-    MODEL_NAME = "sgd50v8.pt"
+    MODEL_NAME = "best_100epochs.pt"
     MODEL_FOLDER = "models"
     FOLDER_PATH = "images"

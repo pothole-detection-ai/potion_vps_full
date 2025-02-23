@@ -112,7 +112,7 @@ def add_text_with_background(image, text, position, font_scale=0.5, color=(255, 
     cv2.putText(image, text, (text_x, text_y + text_h + 5), cv2.FONT_HERSHEY_SIMPLEX, font_scale, color, thickness)
 
 # Load model
-model = YOLOmodified(r'models/sgd50v8.pt')
+model = YOLOmodified(r'models/best_100epochs.pt')
 
 # Path input and output
 folder_path = r"images"

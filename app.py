@@ -14,5 +14,6 @@ register_routes(app)
 register_socketio_handlers(socketio)
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True, port=5000, host='0.0.0.0')
+    socketio.run(app, debug=True, port=5000, host='0.0.0.0', certfile="cert.pem", keyfile="key.pem")
+
     # socketio.run(app, debug=True, port=5000)
